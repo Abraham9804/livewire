@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\CreatePost;
+use App\Livewire\ShowPost;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,4 +16,5 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/posts/create', CreatePost::class)->name('posts.create');
 });
